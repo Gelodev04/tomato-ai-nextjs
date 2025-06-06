@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { Button } from "./button/Button";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { label: "홈", href: "/" },
@@ -15,6 +17,12 @@ export const Navbar = () => {
     { label: "회사 소개", href: "/about" },
     { label: "고객센터", href: "/support" },
   ];
+
+  const isActiveLink = (href: string) => {
+    if (href === "/" && pathname === "/") return true;
+    if (href !== "/" && pathname.startsWith(href)) return true;
+    return false;
+  };
 
   //   const dropdownItems = [];
 
@@ -40,7 +48,9 @@ export const Navbar = () => {
                     // onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     <button
-                      className={`transition-colors duration-200 flex items-center`}
+                      className={`transition-colors duration-200 flex items-center ${
+                        isActiveLink(link.href) ? "font-bold" : ""
+                      }`}
                     >
                       {link.label}
                       <svg
@@ -74,7 +84,9 @@ export const Navbar = () => {
                 ) : (
                   <Link
                     href={link.href}
-                    className={` transition-colors duration-200`}
+                    className={`transition-colors duration-200 ${
+                      isActiveLink(link.href) ? "font-bold" : ""
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -134,7 +146,9 @@ export const Navbar = () => {
                     {link.hasDropdown ? (
                       <div>
                         <button
-                          className={`w-full text-left  transition-colors duration-200 flex items-center justify-between `}
+                          className={`w-full text-left transition-colors duration-200 flex items-center justify-between ${
+                            isActiveLink(link.href) ? "font-bold" : ""
+                          }`}
                           // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         >
                           {link.label}
@@ -172,7 +186,9 @@ export const Navbar = () => {
                     ) : (
                       <Link
                         href={link.href}
-                        className={`block  transition-colors duration-200 `}
+                        className={`block transition-colors duration-200 ${
+                          isActiveLink(link.href) ? "font-bold" : ""
+                        }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.label}

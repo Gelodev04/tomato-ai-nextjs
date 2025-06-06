@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function ServiceIntroductionPage() {
   return (
     <main className="overflow-hidden  max-w-[1550px] mx-auto">
-      <section className="flex flex-col items-center justify-between relative bg-[#F2EFE7] px-4 h-[calc(100dvh-96px)] ">
+      <section className="flex flex-col items-center justify-between relative bg-[#F2EFE7] px-4 max-h-[calc(100dvh-96px)] ">
         <div className="flex flex-col items-center justify-center h-full ">
           <div className="text-black text-center mt-[5rem] md:mt-10 ">
             <h1 className="text-5xl md:text-6xl lg:text-[60px] font-semibold leading-tight">
