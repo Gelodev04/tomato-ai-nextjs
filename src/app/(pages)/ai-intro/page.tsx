@@ -1,3 +1,4 @@
+import { FAQ } from "@/components/accordion/FAQ";
 import { Button } from "@/components/button/Button";
 import { BiographySteps } from "@/components/cards/BiographySteps";
 import { Insights } from "@/components/cards/Insights";
@@ -147,6 +148,14 @@ export default function ServiceIntroductionPage() {
           <SchoolStrategy />
         </div>
       </section>
+
+      <section className="py-16 px-4 mt-20">
+        <Image className="w-[1334px] h-[718px] mx-auto object-contain" src="/images/best.png" alt="" width={2000} height={2000} />
+      </section>
+
+      <section className="px-4 py-10 mt-[10rem]">
+          <FAQ />
+        </section>
     </main>
   );
 }
