@@ -21,7 +21,7 @@ export default function MenuCarouselSection() {
         </h3>
       </div>
       {/*  */}
-      <div className="flex gap-[4rem]">
+      <div className="flex flex-col md:flex-row gap-[4rem]">
         <MenuItems
           activeMenuIndex={activeMenuIndex}
           onMenuChange={handleMenuChange}
