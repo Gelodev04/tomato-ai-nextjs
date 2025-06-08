@@ -187,6 +187,28 @@ export const steps = [
     },
   ];
 
+  export const analysis  = [
+    {
+      icon: "/icons/analysis/icon1.svg",
+      title: "Top 5 전공 계열 추천",
+      description: "학업 성향과 활동 패턴을 바탕으로 가장 유망한 전공 방향을 제시해드려요.",
+    },
+    {
+      icon: "/icons/analysis/icon2.svg",
+      title: "생기부 강약점 분석",
+      description: "자기소개서나 면접 준비에도 바로 활용 가능한 인사이트를 제공합니다.",
+    },
+    {
+      icon: "/icons/analysis/icon3.svg",
+      title: "대학 · 전형 · 모집단위 매칭",
+      description: "복잡한 입시 구조 속에서 나에게 유리한 선택지만 정리해드려요.",
+    },
+    {
+      icon: "/icons/analysis/icon4.svg",
+      title: "AI 기반 전형 적합도 진단",
+      description: "누적 합격 데이터를 학습한 AI가 각 전형별 적합도를 수치로 보여줍니다.",
+    },
+  ];
 
   
   
