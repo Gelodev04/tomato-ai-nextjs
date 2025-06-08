@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <main className="overflow-hidden px-4 max-w-[1550px] mx-auto">
         {/* Hero Section */}
-        <section className="h-[calc(100dvh-96px)] max-h-[calc(100dvh-96px)]overflow-hidden flex flex-col justify-center ">
+        <section className="py-[8rem]  overflow-hidden flex flex-col justify-center ">
           {/* Hero Content */}
-          <div className="relative   px-4 sm:px-6 lg:px-8 pt-16 lg:pt-0 flex lg:items-center justify-center lg:justify-start h-full">
+          <div className="relative   px-4 sm:px-6 lg:px-8  lg:pt-0 flex lg:items-center justify-center lg:justify-start h-full">
             <div className="text-center lg:text-left max-w-4xl">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight mb-6">
                 <span className="block">AI가 설계하는 나만의</span>
